@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+android:background 背景色を指定する。
+android:orientation viewをどの方向に並べるかを設定する。
+-->
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#A1A9BA"
+        android:orientation="vertical">
+
+    <!--
+    wrap_contentは表示に必要なサイズ
+    match_parentは親のサイズいっぱいまで
+    marginはview同士の余白
+    view内の余白はpaddingで設定する。
+    -->
+    <TextView
+            android:id="@+id/tvLabelInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:background="#ffffff"
+            android:text="@string/tv_msg"
+            android:textSize="25sp"
+    />
+
+    <!--
+    android:inputType　入力欄の種類を指定できる。
+    例えばphoneにすると選択時のキーボードが数字になる。
+    -->
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:layout_marginTop="5dp"
+            android:background="#ffffff"
+            android:inputType="text"
+    />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#df7401"
+            android:orientation="horizontal">
+
+        <CheckBox
+                android:id="@+id/cbDrink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="25dp"
+                android:background="#ffffff"
+                android:text="@string/cb_drink"
+        />
+
+        <CheckBox
+                android:id="@+id/cbFood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:text="@string/cb_food"
+        />
+
+    </LinearLayout>
+
+    <RadioGroup android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="#df7401"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+    >
+
+        <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                     android:id="@+id/rbMale"
+                     android:layout_marginLeft="25dp"
+                     android:layout_marginRight="25dp"
+                     android:background="#ffffff"
+                     android:text="@string/rb_male"
+        />
+
+        <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                     android:id="@+id/rbFemale"
+                     android:background="#ffffff"
+                     android:text="@string/rb_female"
+        />
+
+    </RadioGroup>
+
+    <!--
+    android:entries string-arrayの値を設定する。
+    -->
+    <Spinner android:layout_width="match_parent" android:layout_height="wrap_content"
+             android:id="@+id/spCurryList"
+             android:background="#ffffff"
+             android:entries="@array/sp_currylist"
+             android:paddingBottom="5dp"
+             android:paddingTop="5dp"
+    >
+
+    </Spinner>
+
+    <Button
+            android:text="@string/bt_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/btSave"/>
+
+    <ListView android:layout_width="match_parent" android:layout_height="0dp"
+              android:layout_weight="1"
+              android:background="#ffffff"
+              android:entries="@array/lv_cocktaillist"
+    >
+
+    </ListView>
+
+</LinearLayout>

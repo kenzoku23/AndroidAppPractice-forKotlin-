@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">リスト選択サンプル</string>
+    <string name="dialog_title">注文確認</string>
+    <string name="dialog_msg">選択された定食を注文します。</string>
+    <string name="dialog_btn_ok">注文</string>
+    <string name="dialog_btn_ng">キャンセル</string>
+    <string name="dialog_btn_nu">問合せ</string>
+    <string name="dialog_toast_ok">注文ありがとうございます。</string>
+    <string name="dialog_toast_ng">注文をキャンセルしました。</string>
+    <string name="dialog_toast_nu">お問い合わせ内容をお知らせください。</string>
+</resources>
