@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--showAsAction itemをアクションバーに表示するかを選択する。
+    neverだと常にオーバーフローメニュー
+    alwaysだと常にアクションバー
+    ifroomだとスペースに余裕があるとアクションバー,ないときはオーバーフローメニュー-->
+    <item
+        android:id="@+id/menuListOptionTeishoku"
+        android:title="@string/menu_list_option_teishoku"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menuListOptionCurry"
+        android:title="@string/menu_list_option_curry"
+        app:showAsAction="never" />
+
+</menu>
