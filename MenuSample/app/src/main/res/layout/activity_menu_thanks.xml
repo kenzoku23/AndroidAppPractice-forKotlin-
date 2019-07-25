@@ -32,10 +32,4 @@
 
     </LinearLayout>
 
-    <!--android:onClickでxml上でbuttonのリスナを指定することができる。-->
-    <Button android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="onBackButtonClick"
-            android:text="@string/bt_thx_back"/>
-
 </LinearLayout>

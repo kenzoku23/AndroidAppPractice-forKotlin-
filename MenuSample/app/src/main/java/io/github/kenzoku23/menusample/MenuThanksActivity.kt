@@ -2,6 +2,7 @@ package io.github.kenzoku23.menusample
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
 
@@ -17,11 +18,14 @@ class MenuThanksActivity : AppCompatActivity() {
         //intentから渡ってきた値を受け取る。
         tvMenuName.text = intent.getStringExtra("name")
         tvMenuPrice.text = intent.getStringExtra("price")
+
+        //戻るメニューをアクションバーに設定する。
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
-    fun onBackButtonClick(view: View){
-        //finishは自身を終了させる。
-        //→呼び出し先の画面が表に出てくる。
-        finish()
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == android.R.id.home)
+            finish()
+        return super.onOptionsItemSelected(item)
     }
 }
